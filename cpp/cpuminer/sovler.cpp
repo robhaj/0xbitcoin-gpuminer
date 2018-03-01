@@ -1,5 +1,5 @@
 #include "solver.h"
-#include "sha3.h"
+#include "../sha/sha3.h"
 
 #include <assert.h>
 
