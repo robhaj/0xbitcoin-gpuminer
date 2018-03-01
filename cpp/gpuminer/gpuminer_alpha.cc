@@ -194,21 +194,14 @@ void printKeccak256(const FunctionCallbackInfo<Value> &args)
   args.GetReturnValue().Set(String::NewFromUtf8(isolate, "keccak result --implement me  "));
 }
 
-//start infinite loop
-// Needs to be VERY FAST and done in the GPU !!  (as much as possible)
-
-//can this entire loop be done in the GPU ?
-
 void mine()
 {
-  //PLEASE FILL ME IN- MOST IMPORTANT FUNCTION
-
   struct work *work;
   unsigned long *hashes_done;
   uint32_t max_nonce = 9999999;
   scanhash_sha256s(1, work, max_nonce, hashes_done);
 
-  /*  while(true) {
+  while(true) {
 
     //generate random number -- nonce -- can we do this in the GPU -- should we ?
     int nonce = getRandomNumber();
@@ -222,7 +215,7 @@ void mine()
         //  Push the working nonce to an array !!
           pushSolutionToBuffer(nonce);
     }
-  }*/
+  }
 }
 
 void startMining(const FunctionCallbackInfo<Value> &args)
