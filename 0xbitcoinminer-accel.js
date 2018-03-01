@@ -6,7 +6,7 @@ const BN = require('bn.js');
 
 var tokenContractJSON = require('./contracts/_0xBitcoinToken.json');
 
-var Miner = require('./build/Release/cpuminer');
+var Miner = require('./build/Release/gpuminer');
 
 
 var tokenContract;
