@@ -2,17 +2,15 @@ var web3utils = require('web3-utils');
 const GPUMiner = require('./build/Release/gpuminer');
 
 var difficultyTarget = 5841053340;
-var challengeNumber = 2000;
+var challengeNumber = "0x1785a3e0a145236a70a395c4f68a4dd17c8b686d24588b6bf3750c3dd5eeb71c";
 var ethAddress = '0x8cc3daeC47ae39980155e93f8A3D19d36384ab1e';
 
 //send data into the miner
 console.log('diff target', GPUMiner.setDifficultyTarget(difficultyTarget));
 console.log('challenge number', GPUMiner.setChallengeNumber(challengeNumber));
-console.log('eth address', GPUMiner.setEthAddress(ethAddress));
+console.log('eth address', GPUMiner.setMinerAddress(ethAddress));
 
-console.log('random number', GPUMiner.getRandomNumber());
-
-console.log('hashtest ', GPUMiner.testHashFunction(12345))
+// console.log('hashtest ', GPUMiner.testHashFunction(12345))
 //start the infinite mining loop which is in c++
 
 
@@ -25,7 +23,7 @@ setInterval(function () {
 }, 2000);
 
 setTimeout(function () {
-  var response = GPUMiner.startMining()
+  var response = GPUMiner.run()
   console.log(response)
 
 }, 0);
