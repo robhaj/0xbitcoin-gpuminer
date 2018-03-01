@@ -9,7 +9,7 @@
  "sources": [
         "cpp/gpuminer/addon.cc",
         "cpp/gpuminer/solver.cpp",
-        "cpp/gpuminer/gpuminer.cpp",
+        "cpp/gpuminer/gpuminer_alpha.cpp",
         "cpp/sha/sha3.c",
   ],
 

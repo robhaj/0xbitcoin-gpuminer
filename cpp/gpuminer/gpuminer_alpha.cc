@@ -143,7 +143,6 @@ void getSolutionsBuffer(const FunctionCallbackInfo<Value> &args)
   Isolate *isolate = args.GetIsolate();
 
   int nonce = 0;
-
   if (buffered_solutions_count > 0)
   {
     nonce = solutions[0]; //get first soln
@@ -199,7 +198,7 @@ void mine()
   struct work *work;
   unsigned long *hashes_done;
   uint32_t max_nonce = 9999999;
-  scanhash_sha256s(1, work, max_nonce, hashes_done);
+//   scanhash_sha256s(1, work, max_nonce, hashes_done);
 
   while(true) {
 
@@ -214,6 +213,7 @@ void mine()
     {
         //  Push the working nonce to an array !!
           pushSolutionToBuffer(nonce);
+	printf("WORKING NONCE FOUND!");
     }
   }
 }

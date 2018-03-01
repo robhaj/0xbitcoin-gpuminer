@@ -3,7 +3,7 @@
  * by tpruvot@github - 2017
  */
 
- #include "./miner.h"
+ #include "../../miner.h"
 
  #include "./cuda_helper.h"
 #include <openssl/sha.h>
