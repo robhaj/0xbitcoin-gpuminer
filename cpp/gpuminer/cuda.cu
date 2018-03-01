@@ -16,7 +16,7 @@
 #include <ctype.h>
 #endif
 
-#include "miner.h"
+#include "../../miner.h"
 
 #include "cuda_runtime.h"
 cudaStream_t gpustream[MAX_GPUS] = { 0 };

@@ -8,10 +8,9 @@
  "target_name": "gpuminer",
  "sources": [
         "cpp/gpuminer/addon.cc",
-        "cpp/gpuminer/cuda_keccak256.cu",
         "cpp/gpuminer/solver.cpp",
         "cpp/gpuminer/gpuminer.cpp",
-        "cpp/gpuminer/sha3.c"
+        "cpp/gpuminer/sha3.c",
   ],
 
  'rules': [{
@@ -23,7 +22,6 @@
      'process_outputs_as_sources': 1,
      'action': [
         'nvcc',
-         '-ccbin', 'clang-3.8',
 	'-Xcompiler',
 	'-fpic',
 	'-c',

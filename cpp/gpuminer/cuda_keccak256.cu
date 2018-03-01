@@ -1,4 +1,4 @@
-#include "miner.h"
+#include "../../miner.h"
 #include <stdint.h>
 #include <memory.h>
 #include "cuda_helper.h"

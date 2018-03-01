@@ -5,13 +5,13 @@
 extern "C" {
 #endif
 
-#include "ccminer-config.h"
+#include "cpp/gpuminer/ccminer-config.h"
 
 #include <stdbool.h>
 #include <inttypes.h>
 #include <sys/time.h>
 #include <pthread.h>
-#include "jansson/jansson.h"
+#include "cpp/gpuminer/jansson/jansson.h"
 #include <curl/curl.h>
 
 #ifdef _MSC_VER
@@ -43,7 +43,7 @@ void *alloca(size_t);
 #endif
 #endif
 
-#include "compat.h"
+#include "cpp/gpuminer/compat.h"
 
 #ifdef __INTELLISENSE__
 /* should be in stdint.h but... */
